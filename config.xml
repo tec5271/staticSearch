@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <config xmlns="http://hcmc.uvic.ca/ns/staticSearch" version="2">
     <params>
+        <!-- point the searchFile line to point towards project files-->
         <searchFile>../Elder_Scrolls_Morrowind/docs/search.html</searchFile>
         <versionFile>../Elder_Scrolls_Morrowind/docs/VERSION</versionFile>
         <recurse>true<!--Need to set recurse to true for the test--></recurse>
@@ -35,10 +36,13 @@
         <!--2022-10-12 ebb: I'm modifying thee contexts to match the Elder Scrolls project code: -->
         <context match="span[@class='group']"
             label="Groups"/>
+        <context match="span[@class='item']"
+            label="Items"/>
         <context match="span[@class='person']"
             label="People"/>
         <context match="span[@class='location']"
             label="Locations"/>
+        <context match="p[span]" label="Interesting Paragraphs"/>
         
         <context match="cite" label="Citations"/>
        <!-- <context match="p[contains-token(@class,'citation')]" label="Citations"/>-->
